@@ -1,5 +1,7 @@
 # react-geomicons
 
+<!--
+
 ## Getting Started
 
 ```bash
@@ -18,4 +20,4 @@ module.exports = React.createClass({
   }
 });
 ```
-
+-->
