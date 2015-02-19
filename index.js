@@ -20,9 +20,6 @@ module.exports = React.createClass({
         React.__spread({
           dataId: 'geomicon-' + this.props.icon,
           viewBox: '0 0 32 32',
-          //width: this.props.width,
-          //height: this.props.height,
-          //fill: this.props.fill
         }, this.props), 
           React.createElement('path', { d: path })
       )
