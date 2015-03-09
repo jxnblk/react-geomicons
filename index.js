@@ -1,8 +1,8 @@
 
 var React = require('react');
-var iconPaths = require('geomicons-open/src/js/paths');
+var paths = require('geomicons-open/src/js/paths');
 
-module.exports = React.createClass({
+var Icon = React.createClass({
 
   getDefaultProps: function() {
     return {
@@ -14,7 +14,7 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var path = iconPaths[this.props.icon] || false;
+    var path = paths[this.props.icon] || false;
     return (
       React.createElement('svg',
         React.__spread({
@@ -27,4 +27,6 @@ module.exports = React.createClass({
   }
 
 });
+
+module.exports = Icon;
 
