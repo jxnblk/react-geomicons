@@ -6,7 +6,7 @@ var Icon = React.createClass({
 
   getDefaultProps: function() {
     return {
-      icon: 'warning',
+      name: 'warning',
       width: '1em',
       height: '1em',
       fill: 'currentColor',
@@ -14,15 +14,11 @@ var Icon = React.createClass({
   },
 
   render: function() {
-    var path = paths[this.props.icon] || false;
+    var path = paths[this.props.name] || false;
     return (
-      React.createElement('svg',
-        React.__spread({
-          dataId: 'geomicon-' + this.props.icon,
-          viewBox: '0 0 32 32',
-        }, this.props), 
-          React.createElement('path', { d: path })
-      )
+      <svg {...this.props} dataId={'geomicon-'+this.props.name} viewBox="0 0 32 32">
+        <path d={path} />
+      </svg>
     )
   }
 
