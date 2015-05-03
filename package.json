@@ -8,6 +8,7 @@
     "prepublish": "npm run jsx",
     "demo": "webpack --progress --colors",
     "demo:dev": "webpack-dev-server --progress --colors",
+    "demo:prod": "NODE_ENV=production webpack -p --progress --colors",
     "start": "jsx -x jsx -w src ."
   },
   "author": "Brent Jackson",

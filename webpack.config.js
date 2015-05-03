@@ -23,7 +23,7 @@ module.exports = {
   },
 
   plugins: [
-    new StaticSiteGeneratorPlugin('demo.js', paths, data)
+    new StaticSiteGeneratorPlugin('demo.js', paths, data),
   ]
 
 };
