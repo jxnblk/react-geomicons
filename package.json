@@ -31,5 +31,13 @@
     "style-loader": "^0.12.1",
     "webpack": "^1.8.11",
     "webpack-dev-server": "^1.8.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jxnblk/react-geomicons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jxnblk/react-geomicons/issues"
+  },
+  "homepage": "https://github.com/jxnblk/react-geomicons"
 }
