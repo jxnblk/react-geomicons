@@ -33,6 +33,14 @@
     "webpack": "^1.8.11",
     "webpack-dev-server": "^1.8.2"
   },
+  "keywords": [
+    "react",
+    "react-component",
+    "icon",
+    "icons",
+    "geomicons",
+    "svg"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/jxnblk/react-geomicons.git"
