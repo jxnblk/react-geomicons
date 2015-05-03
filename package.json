@@ -1,11 +1,14 @@
 {
   "name": "react-geomicons",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Geomicons Open React component",
   "main": "geomicon.js",
   "scripts": {
     "jsx": "jsx -x jsx src .",
     "prepublish": "npm run jsx",
+    "demo": "webpack --progress --colors",
+    "demo:dev": "webpack-dev-server --progress --colors",
+    "demo:prod": "NODE_ENV=production webpack -p --progress --colors",
     "start": "jsx -x jsx -w src ."
   },
   "author": "Brent Jackson",
@@ -17,6 +20,25 @@
     "react": "0.12 - 1.0.0"
   },
   "devDependencies": {
-    "react-tools": "^0.12.2"
-  }
+    "basscss": "^6.0.2",
+    "bassdock": "^1.3.8",
+    "colors.css": "^2.3.0",
+    "css-loader": "^0.12.0",
+    "cssnext": "^1.4.0",
+    "jsx-loader": "^0.13.2",
+    "marked": "^0.3.3",
+    "react-tools": "^0.12.2",
+    "static-site-generator-webpack-plugin": "^1.0.0",
+    "style-loader": "^0.12.1",
+    "webpack": "^1.8.11",
+    "webpack-dev-server": "^1.8.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jxnblk/react-geomicons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jxnblk/react-geomicons/issues"
+  },
+  "homepage": "https://github.com/jxnblk/react-geomicons"
 }
