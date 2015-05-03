@@ -2,10 +2,6 @@
 var React = require('react');
 var Icon = require('../geomicon');
 
-// To do
-// - size switch
-// - color switch
-
 var Demo = React.createClass({
 
   getInitialState: function() {
