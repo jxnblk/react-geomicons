@@ -1,7 +1,7 @@
 {
   "name": "react-geomicons",
   "version": "2.0.3",
-  "description": "Geomicons Open React component",
+  "description": "React icon component for Geomicons Open",
   "main": "geomicon.js",
   "scripts": {
     "jsx": "jsx -x jsx src .",
@@ -20,11 +20,18 @@
     "react": "0.12 - 1.0.0"
   },
   "devDependencies": {
+    "babel": "^5.6.5",
+    "babel-core": "^5.6.5",
+    "babel-loader": "^5.1.4",
     "basscss": "^6.0.2",
+    "basscss-base-forms": "^2.0.0-beta.2",
+    "basscss-color-forms": "^3.0.0-beta.0",
     "bassdock": "^1.3.8",
+    "blk": "^3.0.4",
     "colors.css": "^2.3.0",
     "css-loader": "^0.12.0",
     "cssnext": "^1.4.0",
+    "cssnext-loader": "^1.0.1",
     "jsx-loader": "^0.13.2",
     "marked": "^0.3.3",
     "react-tools": "^0.12.2",

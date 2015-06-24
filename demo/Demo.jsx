@@ -47,7 +47,7 @@ var Demo = React.createClass({
               Size
             </label>
             <select id="size-select"
-              className="field-light"
+              className="field field-light"
               value={this.state.size}
               onChange={this.handleSizeChange}>
               {this.props.sizes.map(function(size, i) {
@@ -61,7 +61,7 @@ var Demo = React.createClass({
               Color
             </label>
             <select id="color-select"
-              className="field-light"
+              className="field field-light"
               value={this.state.color}
               onChange={this.handleColorChange}>
               {this.props.colors.map(function(color, i) {
@@ -71,7 +71,7 @@ var Demo = React.createClass({
           </div>
           <button onClick={this.props.toggleNightmode}
             title="Toggle background color"
-            className="ml1 mr1 button button-outline border-darken-2">
+            className="ml1 mr1 btn btn-outline">
             <svg viewBox="0 0 24 24"
               width="1em" height="1em"
               fill="currentColor"
@@ -79,6 +79,7 @@ var Demo = React.createClass({
               className="inline-block">
               <path d="M12 0, A 12 12 0 0 0 12 24, A 12 12 0 0 0 12 0 M12 2 V22 A10 10 0 0 1 12 2" />
             </svg>
+            {' '}
             <span className="hide">Background color</span>
           </button>
         </div>

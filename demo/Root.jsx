@@ -3,6 +3,11 @@ var React = require('react');
 var Demo = require('./Demo.jsx');
 var Markdown = require('./Markdown.jsx');
 
+var blk = require('blk')
+var Header = blk.Header
+var Footer = blk.Footer
+var css = require('./base.css')
+
 var Root = React.createClass({
 
   getInitialState: function() {
@@ -19,6 +24,10 @@ var Root = React.createClass({
   render: function() {
     var initialProps = { __html: safeStringify(this.props) };
 
+    var links = [
+      { href: '//npmjs.com/package/' + this.props.name, text: 'npm' },
+      { href: this.props.homepage, text: 'Github' }
+    ]
 
     return (
       <html>
@@ -26,32 +35,41 @@ var Root = React.createClass({
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width,initial-scale=1" />
           <title>{this.props.name}</title>
-          <style>{this.props.bass}</style>
+          <style dangerouslySetInnerHTML={{ __html: css }} />
         </head>
         <body className={'px3 ' + (this.state.nightmode ? 'white bg-black' : '')}>
           <Demo {...this.props} toggleNightmode={this.toggleNightmode} />
-          <div className="container py3">
-            <Markdown>
-              {this.props.readme}
-            </Markdown>
+          <Header {...this.props}
+            title='React Geomicons'
+            href='/react-geomicons'
+            links={links} />
+          <Markdown>
+            {[
+              '## Getting Started',
+              '\n',
+              '```bash',
+              'npm i react-geomicons',
+              '```',
+              '\n',
+              '```js',
+              'import React from \'react\'',
+              'import Icon from \'react-geomicons\'',
+              '',
+              'React.render(<Icon name=\'heart\' \/\>\, document.querySelector(\'#heart-icon\'))',
+              '```'
+            ].join('\n')}
+          </Markdown>
+          <div className='py3'>
+            <p>Read the full documentation on GitHub</p>
+            <a href={this.props.homepage}
+              className='btn btn-primary'>
+              GitHub
+            </a>
           </div>
-          <footer className="container py2 border-top">
-            <div className="flex flex-wrap mxn2">
-              <a href={this.props.homepage}
-                className="button button-transparent">
-                GitHub
-              </a>
-              <a href={'http://npmjs.com/package/'+this.props.name}
-                className="button button-transparent">
-                npm
-              </a>
-              <div className="flex-auto" />
-              <a href="http://jxnblk.com"
-                className="button button-transparent">
-                Made by Jxnblk
-              </a>
-            </div>
-          </footer>
+          <Footer
+            title='React Geomicons'
+            href='/react-geomicons'
+            links={links} />
           <script id="initial-props"
             type="application/json"
             dangerouslySetInnerHTML={initialProps} />
