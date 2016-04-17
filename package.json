@@ -1,6 +1,6 @@
 {
   "name": "react-geomicons",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "React icon component for Geomicons Open",
   "main": "geomicon.js",
   "scripts": {
