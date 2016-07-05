@@ -1,8 +1,8 @@
 
-var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
 
-var paths = [ '/' ];
-var data = require('./demo/data');
+var paths = [ '/' ]
+var data = require('./demo/data')
 
 module.exports = {
 
@@ -26,4 +26,5 @@ module.exports = {
     new StaticSiteGeneratorPlugin('demo.js', paths, data),
   ]
 
-};
+}
+
