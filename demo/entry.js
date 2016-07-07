@@ -1,15 +1,10 @@
 
-var React = require('react');
-var Root = require('./Root.jsx');
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 
-if (typeof document !== 'undefined') {
-  var propsEl = document.getElementById('initial-props');
-  var initialProps = JSON.parse(propsEl.innerHTML);
-  React.render(React.createElement(Root, initialProps), document);
-}
+console.log('h', h)
 
-module.exports = function render(locals, callback) {
-  var html = React.renderToString(React.createElement(Root, locals));
-  callback(null, '<!DOCTYPE html>' + html);
-};
+const div = document.getElementById('app')
+ReactDOM.render(<App />, div)
 
