@@ -1,13 +1,14 @@
 
 import React from 'react'
+import cxs from 'cxs'
 import Preview from './Preview'
 import Readme from './Readme'
 import Footer from './Footer'
 
-const cx = {
+const cx = cxs({
   fontFamily: '-apple-system, sans-serif',
-  lineHeight: 1.5,
-}
+  lineHeight: 1.5
+})
 
 class App extends React.Component {
   constructor () {

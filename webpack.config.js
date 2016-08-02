@@ -18,12 +18,6 @@ module.exports = {
     ]
   },
 
-  plugins: [
-    new webpack.ProvidePlugin({
-      h: 'react-cxs'
-    })
-  ],
-
   devServer: {
     contentBase: 'demo'
   }

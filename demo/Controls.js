@@ -1,4 +1,6 @@
 
+import React from 'react'
+import cxs from 'cxs'
 import { colors } from './styles'
 
 const Select = ({
@@ -10,7 +12,7 @@ const Select = ({
   ...props
 }) => {
   const cx = {
-    select: {
+    select: cxs({
       fontFamily: 'inherit',
       fontSize: 'inherit',
       fontWeight: 'bold',
@@ -30,7 +32,7 @@ const Select = ({
         outline: 'none',
         boxShadow: `0 0 0 3px`
       }
-    }
+    })
   }
 
   return (
@@ -56,17 +58,17 @@ const Controls = ({
   onChange
 }) => {
   const cx = {
-    root: {
+    root: cxs({
       fontSize: 14,
       display: 'flex',
       alignItems: 'center'
-    },
-    firstSelect: {
+    }),
+    firstSelect: cxs({
       marginLeft: 'auto'
-    },
-    select: {
+    }),
+    select: cxs({
       marginLeft: 16
-    }
+    })
   }
 
   const colorOptions = Object.keys(colors)

@@ -1,6 +1,8 @@
 
+import React from 'react'
+import cxs from 'cxs'
 import Icon from '..'
-import paths from 'geomicons-open/src/js/paths'
+import paths from 'geomicons-open'
 import Controls from './Controls'
 
 const Preview = ({
@@ -12,28 +14,29 @@ const Preview = ({
   const icons = Object.keys(paths)
 
   const cx = {
-    root: {
+    root: cxs({
       fontSize: size,
       textAlign: 'center',
       padding: 32,
+      minHeight: '80vh',
       color: inverted ? color : '#444',
       backgroundColor: inverted ? '#444' : '#fff'
-    },
-    iconCell: {
+    }),
+    iconCell: cxs({
       display: 'inline-block',
       width: 1.25 * size,
       margin: size / 2
-    },
-    icons: {
+    }),
+    icons: cxs({
       marginTop: 16,
-    },
-    icon: {
+    }),
+    icon: cxs({
       width: '1em',
       height: '1em',
-    },
-    label: {
+    }),
+    label: cxs({
       fontSize: 12
-    }
+    })
   }
 
   return (
