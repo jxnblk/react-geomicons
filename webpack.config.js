@@ -1,29 +1,24 @@
 
-var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
-
-var paths = [ '/' ];
-var data = require('./demo/data');
+const path = require('path')
 
 module.exports = {
-
-  entry: './demo/entry.js',
+  entry: './docs/entry.js',
 
   output: {
-    filename: 'demo.js',
-    path: __dirname,
-    //publicPath: 'demo',
-    libraryTarget: 'umd'
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'docs')
   },
 
   module: {
     loaders: [
-      { test: /(\.js$|\.jsx$)/, exclude: /node_modules/, loader: 'babel-loader' },
-      { test: /\.css$/, loader: 'css-loader!cssnext-loader' },
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
+      { test: /\.json$/, loader: 'json' },
+      { test: /\.md/, loader: 'html!highlight!markdown' }
     ]
   },
 
-  plugins: [
-    new StaticSiteGeneratorPlugin('demo.js', paths, data),
-  ]
+  devServer: {
+    contentBase: 'docs'
+  }
+}
 
-};
