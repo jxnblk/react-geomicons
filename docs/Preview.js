@@ -27,7 +27,7 @@ const Preview = ({
       backgroundColor: inverted ? dark : 'white'
     },
     icons: {
-      fontSize: size,
+      fontSize: size
     }
   }
 
@@ -43,7 +43,7 @@ const Preview = ({
     title: cxs({
       marginTop: 0,
       marginBottom: 0,
-      marginLeft: 32,
+      marginLeft: 32
     }),
     iconCell: cxs({
       display: 'inline-flex',
@@ -56,11 +56,11 @@ const Preview = ({
     }),
     icons: cxs({
       transition: 'font-size .3s ease-out',
-      marginTop: 16,
+      marginTop: 16
     }),
     icon: cxs({
       width: '1em',
-      height: '1em',
+      height: '1em'
     }),
     label: cxs({
       fontSize: 12

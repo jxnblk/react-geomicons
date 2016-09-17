@@ -14,7 +14,7 @@ const Readme = () => {
     },
     code: {
       fontFamily: 'Menlo, monospace',
-      fontSize: 14,
+      fontSize: 14
     },
     pre: {
       fontFamily: 'Menlo, monospace',

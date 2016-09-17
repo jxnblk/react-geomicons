@@ -115,7 +115,7 @@ const Controls = ({
       fontSize: 14,
       display: 'flex',
       alignItems: 'center',
-      padding: 16,
+      padding: 16
     }),
     left: cxs({
       marginLeft: 'auto',
@@ -125,7 +125,7 @@ const Controls = ({
       width: '100%',
       maxWidth: 512,
       minHeight: 1,
-      minWidth: 1,
+      minWidth: 1
     }),
     firstSelect: cxs({
       marginLeft: 'auto'

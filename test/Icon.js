@@ -7,7 +7,7 @@ import Icon from '../src/Icon'
 
 test('renders', t => {
   t.notThrows(() => {
-    const wrapper = shallow(<Icon />)
+    shallow(<Icon />)
   })
 })
 
