@@ -2,11 +2,11 @@
 const path = require('path')
 
 module.exports = {
-  entry: './demo/entry.js',
+  entry: './docs/entry.js',
 
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'demo')
+    path: path.resolve(__dirname, 'docs')
   },
 
   module: {
@@ -18,7 +18,7 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: 'demo'
+    contentBase: 'docs'
   }
 }
 
