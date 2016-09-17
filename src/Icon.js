@@ -6,14 +6,16 @@ const Icon = ({
   name = 'warning',
   size = '1em',
   fill = 'currentColor',
+  width,
+  height,
   ...props
 }) => {
   const path = paths[name]
 
   return (
     <svg {...props}
-      width={size}
-      height={size}
+      width={width || size}
+      height={height || size}
       fill={fill}
       data-id={`geomicon-${name}`}
       viewBox='0 0 32 32'>
