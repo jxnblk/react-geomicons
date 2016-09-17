@@ -118,10 +118,12 @@ const Controls = ({
       padding: 16,
     }),
     left: cxs({
+      marginLeft: 'auto',
       flex: '1 1 auto',
       display: 'flex-inline',
       alignItems: 'center',
       width: '100%',
+      maxWidth: 512,
       minHeight: 1,
       minWidth: 1,
     }),

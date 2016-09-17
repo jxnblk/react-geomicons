@@ -34,10 +34,16 @@ const Preview = ({
   const cx = {
     root: cxs({
       textAlign: 'left',
-      padding: 0
+      paddingTop: 32,
+      paddingBottom: 32,
+      transitionProperty: 'color, background-color',
+      transitionDuration: '.3s, .6s',
+      transitionTimingFunction: 'ease-out'
     }),
     title: cxs({
-      margin: 32,
+      marginTop: 0,
+      marginBottom: 0,
+      marginLeft: 32,
     }),
     iconCell: cxs({
       display: 'inline-flex',
@@ -49,7 +55,7 @@ const Preview = ({
       margin: 32
     }),
     icons: cxs({
-      transition: 'font-size .1s ease-out',
+      transition: 'font-size .3s ease-out',
       marginTop: 16,
     }),
     icon: cxs({
@@ -65,12 +71,6 @@ const Preview = ({
     <div
       className={cx.root}
       style={sx.root}>
-      <Controls
-        color={color}
-        size={size}
-        inverted={inverted}
-        toggle={toggle}
-        onChange={onChange} />
       <h1 className={cx.title}>
         React Geomicons
       </h1>
@@ -90,6 +90,12 @@ const Preview = ({
           </div>
         ))}
       </div>
+      <Controls
+        color={color}
+        size={size}
+        inverted={inverted}
+        toggle={toggle}
+        onChange={onChange} />
     </div>
   )
 }

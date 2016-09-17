@@ -1,6 +1,8 @@
 
 # react-geomicons
 
+[![Build Status](https://travis-ci.org/jxnblk/react-geomicons.svg?branch=master)](https://travis-ci.org/jxnblk/react-geomicons)
+
 React icon component for Geomicons Open
 
 [View Demo](http://jxnblk.com/react-geomicons)
