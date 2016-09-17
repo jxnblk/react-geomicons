@@ -35,5 +35,5 @@ React-geomicons passes all props to the SVG element, in addition to the followin
 
 See [Geomicons Open](https://github.com/jxnblk/geomicons-open) for the list of available icons.
 
-MIT License
+[MIT License](LICENSE.md)
 
