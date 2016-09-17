@@ -8,7 +8,7 @@ import { colors } from './styles'
 
 const cx = cxs({
   fontFamily: '-apple-system, sans-serif',
-  lineHeight: 1.5,
+  lineHeight: 1.5
 })
 
 class App extends React.Component {

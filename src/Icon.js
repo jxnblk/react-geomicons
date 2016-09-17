@@ -1,11 +1,10 @@
 
 import React from 'react'
-import paths from 'geomicons-open/dist/paths.json'
+import paths from 'geomicons-open'
 
 const Icon = ({
   name = 'warning',
-  width = '1em',
-  height = '1em',
+  size = '1em',
   fill = 'currentColor',
   ...props
 }) => {
@@ -13,14 +12,23 @@ const Icon = ({
 
   return (
     <svg {...props}
-      width={width}
-      height={height}
+      width={size}
+      height={size}
       fill={fill}
       data-id={`geomicon-${name}`}
       viewBox='0 0 32 32'>
       <path d={path} />
     </svg>
   )
+}
+
+Icon.propTypes = {
+  name: React.PropTypes.oneOf(Object.keys(paths)),
+  size: React.PropTypes.oneOfType([
+    React.PropTypes.string,
+    React.PropTypes.number
+  ]),
+  fill: React.PropTypes.string
 }
 
 export default Icon

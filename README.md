@@ -1,3 +1,4 @@
+
 # react-geomicons
 
 React icon component for Geomicons Open
@@ -27,8 +28,7 @@ module.exports = React.createClass({
 React-geomicons passes all props to the SVG element, in addition to the following:
 
 - `name` - camel cased icon name
-- `width` - default `1em` (inherits size from parent element)
-- `height` - default `1em` (inherits size from parent element)
+- `size` - sets width and height attributes. default `1em` (inherits size from parent element)
 - `fill` - default `currentColor` (inherits color from parent element)
 
 See [Geomicons Open](https://github.com/jxnblk/geomicons-open) for the list of available icons.

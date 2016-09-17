@@ -13,7 +13,7 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
-    "geomicons-open": "^2.0.0"
+    "geomicons-open": "^3.0.0-beta.2"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0"
@@ -28,6 +28,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.9.0",
     "cxs": "^1.0.1",
+    "enzyme": "^2.4.1",
     "highlight-loader": "^0.7.2",
     "html-loader": "^0.4.3",
     "json-loader": "^0.5.4",
@@ -35,7 +36,6 @@
     "marked": "^0.3.6",
     "react": "^15.2.0",
     "react-addons-test-utils": "^15.2.0",
-    "react-cxs": "^1.0.0-beta.1",
     "react-dom": "^15.2.0",
     "static-site-generator-webpack-plugin": "^2.1.0",
     "webpack": "^1.13.1",

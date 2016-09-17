@@ -2,7 +2,7 @@
 import React from 'react'
 import cxs from 'cxs'
 import Icon from '..'
-import paths from 'geomicons-open/dist/paths.json'
+import paths from 'geomicons-open'
 import Controls from './Controls'
 
 const Preview = ({
