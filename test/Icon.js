@@ -2,7 +2,7 @@
 import test from 'ava'
 import React from 'react'
 import TestUtils from 'react-addons-test-utils'
-import paths from 'geomicons-open/src/js/paths'
+import paths from 'geomicons-open/dist/paths.json'
 import Icon from '../src/Icon'
 
 const r = TestUtils.createRenderer()

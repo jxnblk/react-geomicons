@@ -1,6 +1,6 @@
 
 import React from 'react'
-import paths from 'geomicons-open/src/js/paths'
+import paths from 'geomicons-open/dist/paths.json'
 
 const Icon = ({
   name = 'warning',
