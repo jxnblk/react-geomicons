@@ -1,6 +1,7 @@
 
 import React from 'react'
 import cxs from 'cxs'
+import { Slider } from 'rebass'
 import { colors } from './styles'
 
 const Select = ({
@@ -116,6 +117,14 @@ const Controls = ({
       alignItems: 'center',
       padding: 16,
     }),
+    left: cxs({
+      flex: '1 1 auto',
+      display: 'flex-inline',
+      alignItems: 'center',
+      width: '100%',
+      minHeight: 1,
+      minWidth: 1,
+    }),
     firstSelect: cxs({
       marginLeft: 'auto'
     })
@@ -127,20 +136,19 @@ const Controls = ({
 
   return (
     <div className={cx.root}>
-      <Select
-        name='size'
-        label='Size'
-        value={size}
-        onChange={onChange}
-        className={cx.firstSelect}
-        options={[
-          { children: '8' },
-          { children: '16' },
-          { children: '24' },
-          { children: '32' },
-          { children: '48' },
-          { children: '64' }
-        ]} />
+      <div className={cx.left}>
+        <Slider
+          name='size'
+          label='Size'
+          hideLabel
+          min={8}
+          max={64}
+          step={4}
+          m={0}
+          value={size}
+          onChange={onChange}
+        />
+      </div>
       <Select
         name='color'
         label='Color'

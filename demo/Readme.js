@@ -11,6 +11,15 @@ const Readme = () => {
     maxWidth: 640,
     'a': {
       color: colors.blue
+    },
+    code: {
+      fontFamily: 'Menlo, monospace',
+      fontSize: 14,
+    },
+    pre: {
+      fontFamily: 'Menlo, monospace',
+      fontSize: 14,
+      overflowX: 'auto'
     }
   })
 

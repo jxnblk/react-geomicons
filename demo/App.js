@@ -26,6 +26,7 @@ class App extends React.Component {
   handleChange (e) {
     const { name, value } = e.target
     const n = parseFloat(value)
+    console.log(n)
     const val = isNaN(n) ? value : n
     this.setState({ [name]: val })
   }

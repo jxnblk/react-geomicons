@@ -1,9 +1,13 @@
 
 import React from 'react'
 import cxs from 'cxs'
+import chroma from 'chroma-js'
 import Icon from '..'
 import paths from 'geomicons-open'
 import Controls from './Controls'
+
+const desaturate = n => color => chroma(color).desaturate(n).hex()
+const darken = n => color => chroma(color).darken(n).hex()
 
 const Preview = ({
   color,
@@ -15,12 +19,22 @@ const Preview = ({
   const icons = Object.keys(paths)
     .filter(k => !/github|facebook|twitter/.test(k))
 
+  const dark = darken(3)(desaturate(4)(color))
+
+  const sx = {
+    root: {
+      color,
+      backgroundColor: inverted ? dark : 'white'
+    },
+    icons: {
+      fontSize: size,
+    }
+  }
+
   const cx = {
     root: cxs({
       textAlign: 'left',
-      padding: 0,
-      color: color,
-      backgroundColor: inverted ? '#111' : '#fff'
+      padding: 0
     }),
     title: cxs({
       margin: 32,
@@ -35,7 +49,7 @@ const Preview = ({
       margin: 32
     }),
     icons: cxs({
-      fontSize: size,
+      transition: 'font-size .1s ease-out',
       marginTop: 16,
     }),
     icon: cxs({
@@ -48,7 +62,9 @@ const Preview = ({
   }
 
   return (
-    <div className={cx.root}>
+    <div
+      className={cx.root}
+      style={sx.root}>
       <Controls
         color={color}
         size={size}
@@ -58,7 +74,9 @@ const Preview = ({
       <h1 className={cx.title}>
         React Geomicons
       </h1>
-      <div className={cx.icons}>
+      <div
+        className={cx.icons}
+        style={sx.icons}>
         {icons.map((key, i) => (
           <div key={i} className={cx.iconCell}>
             <Icon
