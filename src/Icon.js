@@ -1,5 +1,5 @@
-
 import React from 'react'
+import PropTypes from 'prop-types'
 import paths from 'geomicons-open'
 
 const Icon = ({
@@ -25,12 +25,12 @@ const Icon = ({
 }
 
 Icon.propTypes = {
-  name: React.PropTypes.oneOf(Object.keys(paths)),
-  size: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.number
+  name: PropTypes.oneOf(Object.keys(paths)),
+  size: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
   ]),
-  fill: React.PropTypes.string
+  fill: PropTypes.string
 }
 
 export default Icon
