@@ -5,7 +5,7 @@
 
 React icon component for Geomicons Open
 
-[View Demo](http://jxnblk.com/react-geomicons)
+[View Demo](https://jxnblk.github.io/react-geomicons)
 
 ## Getting Started
 
