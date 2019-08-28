@@ -1,62 +1,36 @@
-
 import test from 'ava'
 import React from 'react'
-import { shallow } from 'enzyme'
+import TestRenderer from 'react-test-renderer'
 import paths from 'geomicons-open'
 import Icon from '../src/Icon'
 
+const renderJSON = el => TestRenderer.create(el).toJSON()
+
 test('renders', t => {
-  t.notThrows(() => {
-    shallow(<Icon />)
-  })
+  const json = renderJSON(<Icon />)
+  t.snapshot(json)
 })
 
-test('renders an SVG', t => {
-  const wrapper = shallow(<Icon />)
-  t.is(wrapper.type(), 'svg')
+test('sets width and height props', t => {
+  const json = renderJSON(
+    <Icon size='32' />
+  )
+  t.is(json.props.width, '32')
+  t.is(json.props.height, '32')
 })
 
-test('has default props', t => {
-  t.plan(2)
-  const wrapper = shallow(<Icon />)
-  t.is(wrapper.find('svg').props()['data-id'], 'geomicon-warning')
-  t.is(wrapper.find('svg').props().viewBox, '0 0 32 32')
+test('sets fill', t => {
+  const json = renderJSON(
+    <Icon fill='tomato' />
+  )
+  t.is(json.props.fill, 'tomato')
 })
 
 Object.keys(paths).forEach(key => {
   test(`sets ${key} icon`, t => {
-    t.plan(2)
-    const wrapper = shallow(<Icon name={key} />)
-    t.is(wrapper.find('svg').props()['data-id'], `geomicon-${key}`)
-    t.is(wrapper.find('path').props().d, paths[key])
+    const json = renderJSON(<Icon name={key} />)
+    const [ path ] = json.children
+    t.is(json.props['data-id'], `geomicon-${key}`)
+    t.is(path.props.d, paths[key])
   })
 })
-
-test('sets fill prop', t => {
-  const wrapper = shallow(<Icon fill='tomato' />)
-  t.is(wrapper.props().fill, 'tomato')
-})
-
-test('sets width and height props', t => {
-  t.plan(2)
-  const wrapper = shallow(<Icon size='32' />)
-  t.is(wrapper.find('svg').props().width, '32')
-  t.is(wrapper.find('svg').props().height, '32')
-})
-
-test('warns when passing invalid icon key to name prop', t => {
-  let callCount = 0
-  console.error = (text) => {
-    callCount++
-  }
-  shallow(<Icon name='foo' />)
-  t.is(callCount, 1)
-})
-
-test('does not pass component props to DOM element', t => {
-  const wrapper = shallow(<Icon size={32} name='bookmark' />)
-  const props = wrapper.find('svg').props()
-  t.falsy(props.size)
-  t.falsy(props.name)
-})
-

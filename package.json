@@ -1,24 +1,25 @@
 {
   "name": "react-geomicons",
-  "version": "2.1.0",
+  "version": "3.0.0-0",
   "description": "React icon component for Geomicons Open",
   "main": "dist/Icon.js",
   "scripts": {
-    "prepublish": "mkdir -p dist && babel src --out-dir dist",
+    "prepare": "mkdir -p dist && babel src --out-dir dist",
     "build": "NODE_ENV=production webpack -p",
     "start": "webpack-dev-server",
-    "test": "standard && ava test -v"
+    "test": "nyc ava"
   },
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
-    "geomicons-open": "^3.0.0-beta.2"
+    "geomicons-open": "^3.0.0-beta.2",
+    "prop-types": "^15.6.2"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0"
   },
   "devDependencies": {
-    "ava": "^0.15.2",
+    "ava": "^0.25.0",
     "babel-cli": "^6.11.4",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-react-jsx": "^6.8.0",
@@ -28,15 +29,16 @@
     "babel-register": "^6.9.0",
     "chroma-js": "^1.2.1",
     "cxs": "^1.0.1",
-    "enzyme": "^2.4.1",
     "highlight-loader": "^0.7.2",
     "html-loader": "^0.4.3",
     "json-loader": "^0.5.4",
     "markdown-loader": "^0.1.7",
     "marked": "^0.3.6",
-    "react": "^15.2.0",
+    "nyc": "^13.1.0",
+    "react": "^16.6.0",
     "react-addons-test-utils": "^15.2.0",
-    "react-dom": "^15.2.0",
+    "react-dom": "^16.6.0",
+    "react-test-renderer": "^16.6.0",
     "rebass": "^0.3.2",
     "standard": "^8.1.0",
     "static-site-generator-webpack-plugin": "^2.1.0",
